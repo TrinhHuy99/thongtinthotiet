@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-5.15.1-web/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" href="./assets/images/thoitiet.png" tyle="image/x-icon">
+    <script src="./assets/js/moment.js"></script>
+
+</head>
+<!-- wether-conditions để lấy hình ảnh mây và openweathermap để lấy api -->
+
+<body>
+    <div class="container">
+        <div class="main-section">
+            <div class="search-bar">
+                <i class="search-icon fas fa-search"></i>
+                <input type="text" name="search-city" id="search-input" placeholder="Tìm kiếm thời tiết...">
+                <span class="mic">
+                    <i class="fas fa-microphone"></i>
+                    <span class="recording-icon"></span>
+                </span>
+
+            </div>
+            <div class="info-wrapper">
+                <p class="city-name">--</p>
+                <p class="weather-state">--</p>
+                <img src=" http://openweathermap.org/img/wn/10d@2x.png" alt="Weather Icon" class="weather-icon">
+                <p class="temperater">--</p>
+            </div>
+
+
+        </div>
+        <div class="additional-section">
+            <div class="row">
+                <div class="item">
+                    <div class="label">Bình minh</div>
+                    <div class="value sunrise">--</div>
+                </div>
+                <div class="item">
+                    <div class="label">Hoàng hôn</div>
+                    <div class="value sunset">--</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="item">
+                    <div class="label">Độ ẩm</div>
+                    <div class="value"><span class="humidity">--</span>%</div>
+                </div>
+                <div class="item">
+                    <div class="label">Gió</div>
+                    <div class="value"><span class="wind-speed">--</span>km/h</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    color: white;
+    background: linear-gradient(145deg, #2163b0, #6dd5ed);
+    width: 400px;
+    max-height: 100vh;
+    margin: 70px auto;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.search-bar {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px 0 5px 0;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+
+.main-section .search-icon {
+    font-size: 15px;
+    margin-right: 5px;
+    position: absolute;
+    left: 0;
+}
+
+#search-input {
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    color: white;
+    font-size: 15px;
+    margin-left: 36px;
+}
+
+.mic {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.mic .recording-icon {
+    display: none;
+    width: 14px;
+    height: 14px;
+    background-color: #e22d2d;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite linear;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 3px 0 rgba(173, 0, 0, 0.3);
+    }
+    65% {
+        box-shadow: 0 0 3px 5px rgba(173, 0, 0, 0.3);
+    }
+    100% {
+        box-shadow: 0 0 3px 5px rgba(173, 0, 0, 0);
+    }
+}
+
+.mic.recording .recording-icon {
+    display: inline-block;
+}
+
+.mic.recording .fas.fa-microphone {
+    display: none;
+}
+
+#search-input::placeholder {
+    color: rgb(206, 198, 198);
+}
+
+.info-wrapper {
+    height: 30vh;
+    padding: 80px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.city-name {
+    font-size: 25px;
+    margin-bottom: 3px;
+}
+
+.weather-state {
+    font-size: 13px;
+}
+
+.weather-icon {
+    width: 70px;
+    height: 70px;
+}
+
+.temperater {
+    position: relative;
+    font-size: 80px;
+    font-weight: lighter;
+    line-height: 1;
+}
+
+.temperater::after {
+    content: "o";
+    position: absolute;
+    font-size: 30px;
+}
+
+.additional-section {
+    display: flex;
+    flex-direction: column;
+    border-top: 2px solid white;
+    padding: 15px;
+}
+
+.row {
+    display: inherit;
+    font-size: 15px;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+
+.item {
+    flex: 1;
+}
+
+.value {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.label {
+    font-weight: bold;
+}
+
+@media (min-width:740px) and (max-width:1023px) {
+    .container {
+        height: 100vh;
+        width: 100vw;
+        margin: 0 auto;
+    }
+    #search-input {
+        display: flex;
+        flex: 1;
+        margin-left: 30px;
+    }
+}
+
+@media (max-width:739px) {
+    .container {
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+    }
+    #search-input {
+        margin-left: 50px;
+    }
+}
